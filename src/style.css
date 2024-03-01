@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+    background: #fff;
+}
+
+#disNavBarDiv {
+    padding: 1.5rem;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+
+.disNavBar {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.disNavBar:first-child {
+    margin-bottom: 1.5rem;
+}
+
+.disList {
+    font-size: 1rem;
+    list-style: none;
+}
