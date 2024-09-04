@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="../icons/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
   <title>Mediplus - Free Medical and Doctor Directory</title>
@@ -17,7 +17,7 @@
   <main id="body">
 
     <header>
-      <div id="disNavBarDiv">
+      <div id="navBarDiv" class="navBarDivs navDesk">
         <ul class="disNavBar">
           <li class="disList">About</li>
           <li class="disList">Doctors</li>
@@ -25,17 +25,59 @@
           <li class="disList">FAQ</li>
         </ul>
         <ul class="disNavBar">
-          <li class="disList sepList"><img src="" alt=""> <span>+880 1234 56789</span></li>
-          <li class="disList sepList"><img src="" alt=""> <span>support@yourmail.com</span></li>
+          <li class="disList sepList"><i class="fa-solid fa-phone" style="color: #1a76d1;"></i> <span>+880 123456789</span></li>
+          <li class="disList sepList"><i class="fa-solid fa-envelope" style="color: #1a76d1;"></i><span>support@yourmail.com</span></li>
         </ul>
       </div>
-      <main id="staticNavBar">
-        <h1 id="staNavHead"></h1>
-        <aside id="staSideDropDown">
-
+      <main id="staBarDiv" class="navDesk">
+        <div id="staInnerDiv" class="navBarDivs">
+          <img src="../icons/logo.png" alt="Mediplus" id="staNavHead"/>
+          <i class="fa-solid fa-bars" id="sideDropDownIcon" style="color: #1a76d1;"></i>
+        </div>
+        <aside id="staSideDropDown" class="staSideDropDown">
+          <ul id="dropDownList">
+            <li class="dropDownItem">
+              <div id="homeDropDownBtn" class="innerDropDown">
+                <span>Home</span>
+                <i class="fa-solid fa-caret-right arrRight" style="color: #2c2d3f;"></i>
+                <i class="fa-solid fa-chevron-down arrDown"></i>
+              </div>
+              <div id="homeDropDown" class="innerDropDownDiv">
+                <p class="innerDropDownList">Home Page 1</p>
+              </div>
+            </li>
+            <li class="dropDownItem noDropDown">Doctors</li>
+            <li class="dropDownItem noDropDown">Services</li>
+            <li class="dropDownItem">
+              <div id="serDropDownBtn" class="innerDropDown">
+                <span>Pages</span>
+                <i class="fa-solid fa-caret-right arrRight" style="color: #2c2d3f;"></i>
+                <i class="fa-solid fa-chevron-down arrDown"></i>
+              </div>
+              <div id="serDropDown" class="innerDropDownDiv">
+                <p class="innerDropDownList">404 Error</p>
+              </div>
+            </li>
+            <li class="dropDownItem">
+              <div id="blogDropDownBtn" class="innerDropDown">
+                <span>Blogs</span>
+                <i class="fa-solid fa-caret-right arrRight" style="color: #2c2d3f;"></i>
+                <i class="fa-solid fa-chevron-down arrDown"></i>
+              </div>
+              <div id="blogDropDown" class="innerDropDownDiv">
+                <p class="innerDropDownList">Blog Details</p>
+              </div>
+            </li>
+            <li class="dropDownItem noDropDown">Contact Us</li>
+          </ul>
         </aside>
+        <button id="appointBtn">Book Appointment</button>
       </main>
     </header>
+
+    <main id="mainBody">
+
+    </main>
 
   </main>
 

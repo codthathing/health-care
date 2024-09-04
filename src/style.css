@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -6,27 +6,341 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-	font-weight: 400;
+    font-weight: 400;
     background: #fff;
 }
 
-#disNavBarDiv {
-    padding: 1.5rem;
-    width: 100%;
+#navBarDiv {
     border-bottom: 1px solid #eee;
 }
 
 .disNavBar {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-}
-
-.disNavBar:first-child {
-    margin-bottom: 1.5rem;
 }
 
 .disList {
-    font-size: 1rem;
     list-style: none;
+}
+
+.sepList {
+    display: flex;
+    align-items: center;
+}
+
+.dropDownItem {
+    list-style: none;
+}
+
+.innerDropDown {
+    display: flex;
+    align-items: baseline;
+}
+
+.innerDropDown,
+.dropDownItem,
+.disList {
+    transition: all linear 250ms;
+}
+
+.innerDropDown:hover,
+.dropDownItem:hover,
+.disList:hover {
+    color: #1a76d1;
+}
+
+.innerDropDownDiv {
+    display: none;
+}
+
+.innerDropDownList {
+    transition: all linear 250ms;
+}
+
+.innerDropDownList:hover {
+    color: #1a76d1;
+}
+
+.togDropDown {
+    display: block;
+}
+
+
+
+
+
+@media all and (max-width: 767px) {
+    .navBarDivs {
+        padding: 1.5rem;
+    }
+
+    .disNavBar {
+        gap: 2rem;
+    }
+
+    .disNavBar:first-child {
+        margin-bottom: 1.5rem;
+    }
+
+    .disList {
+        font-size: 1rem;
+    }
+
+    .sepList {
+        gap: 0 0.25rem;
+    }
+
+    #staNavHead {
+        width: 15rem;
+    }
+
+    #sideDropDownIcon {
+        font-size: 2rem;
+    }
+
+    #staInnerDiv {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #staSideDropDown {
+        padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+
+    .staSideDropDown {
+        display: none;
+    }
+
+    .togDropDown {
+        display: block;
+    }
+
+    #dropDownList {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem 0;
+    }
+
+    .dropDownItem {
+        font-size: 1rem;
+    }
+
+    .innerDropDown {
+        gap: 0 1rem;
+    }
+
+    .arrDown {
+        display: none;
+    }
+
+    .innerDropDownDiv {
+        margin: 1rem 0 0 1rem;
+    }
+
+    .innerDropDownList {
+        font-size: 1rem;
+    }
+
+    #appointBtn {
+        display: none;
+    }
+}
+
+
+
+
+
+
+@media all and (min-width: 768px) {
+    .navDesk {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #sideDropDownIcon {
+        display: none;
+    }
+
+    .arrRight {
+        display: none;
+    }
+
+    #homeDropDownBtn {
+        border-bottom: 2.5px solid #1a76d1;
+    }
+
+    .innerDropDown, .noDropDown {
+        transition: all linear;
+    }
+
+    .innerDropDownDiv {
+        border-left: 2.5px solid #1a76d1;
+        display: none;
+        position: absolute;
+        opacity: 0;
+        /* top: 6.5rem; */
+        animation: hideDropDown 100ms linear;
+    }
+
+    @keyframes hideDropDown {
+        /* 0% {opacity: 1; top: 10.5rem;}
+        25% {opacity: 0.75; top: 9.5rem;}
+        50% {opacity: 0.5; top: 8.5rem;}
+        75% {opacity: 0.25; top: 7.5rem;}
+        100% {opacity: 0; top: 6.5rem;} */
+    }
+
+    .innerDropDown:hover, .noDropDown:hover {
+        border-bottom: 2.5px solid #1a76d1;
+    }
+
+    .innerDropDown:hover + .innerDropDownDiv {
+        display: block;
+        animation: showDropDown 250ms linear;
+        /* top: 10.5rem; */
+        opacity: 1;
+        z-index: 100;
+    }
+
+    @keyframes showDropDown {
+        0% {opacity: 0;}
+        25% {opacity: 0.25;}
+        50% {opacity: 0.5;}
+        75% {opacity: 0.75;}
+        100% {opacity: 1; }
+    }
+}
+
+
+
+
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+    .navDesk {
+        padding: 0 3.5rem;
+    }
+
+    #navBarDiv {
+        padding: 1.75rem 3.5rem;
+    }
+
+    .disNavBar {
+        gap: 3rem;
+    }
+
+    .disList {
+        font-size: 1rem;
+    }
+
+    .sepList {
+        gap: 0 0.75rem;
+    }
+
+    #staNavHead {
+        width: 12.5rem;
+    }
+
+    #dropDownList {
+        display: flex;
+        gap: 0 1.5rem;
+    }
+
+    .dropDownItem {
+        font-size: 1rem;
+    }
+
+    .arrDown {
+        font-size: 0.95rem;
+    }
+
+    .innerDropDown, .noDropDown {
+        padding: 1.75rem 1rem;
+    }
+
+    .innerDropDown {
+        gap: 0 0.5rem;
+    }
+
+    .innerDropDownDiv {
+        padding: 1.25rem 8.5rem 1.25rem 1rem;
+    }
+
+    .innerDropDownList {
+        font-size: 1rem;
+    }
+
+    #appointBtn {
+        display: none;
+    }
+}
+
+
+
+
+
+@media all and (min-width: 1024px) {
+
+    .navDesk {
+        padding: 0 7rem;
+    }
+
+    #navBarDiv {
+        padding: 1.25rem 7rem;
+    }
+
+    .disNavBar {
+        gap: 1.5rem;
+    }
+
+    .disList {
+        font-size: 1.25rem;
+    }
+
+    .sepList {
+        gap: 0 0.5rem;
+    }
+
+    #staNavHead {
+        width: 15rem;
+    }
+
+    #dropDownList {
+        display: flex;
+        gap: 0 2.25rem;
+    }
+
+    .dropDownItem {
+        font-size: 1.25rem;
+    }
+
+    .arrDown {
+        font-size: 0.75rem;
+    }
+
+    .innerDropDown, .noDropDown {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .innerDropDown {
+        gap: 0 0.5rem;
+    }
+
+    .innerDropDownDiv {
+        padding: 1.25rem 8.5rem 1.25rem 1.25rem;
+    }
+
+    .innerDropDownList {
+        font-size: 1.25rem;
+    }
+
+    #appointBtn {
+        background-color: #1a76d1;
+        padding: 1.5rem 2rem;
+        border-radius: 0.5rem;
+        color: #eee;
+        border: none;
+        font-size: 1rem;
+    }
 }
